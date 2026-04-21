@@ -1,0 +1,961 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: coursera.spec.ts >> Coursera Project
+- Location: tests\coursera.spec.ts:6:5
+
+# Error details
+
+```
+Error: locator.scrollIntoViewIfNeeded: Element is not attached to the DOM
+Call log:
+  - attempting scroll into view action
+    - waiting for element to be stable
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - navigation "Banner" [ref=e13]:
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "For Individuals" [ref=e16] [cursor=pointer]:
+              - /url: https://www.coursera.org/
+              - generic [ref=e17]: For Individuals
+          - listitem [ref=e18]:
+            - link "For Businesses" [ref=e19] [cursor=pointer]:
+              - /url: https://www.coursera.org/business
+              - generic [ref=e20]: For Businesses
+          - listitem [ref=e21]:
+            - link "For Universities" [ref=e22] [cursor=pointer]:
+              - /url: https://www.coursera.org/campus
+              - generic [ref=e23]: For Universities
+          - listitem [ref=e24]:
+            - link "For Governments" [ref=e25] [cursor=pointer]:
+              - /url: https://www.coursera.org/government
+              - generic [ref=e26]: For Governments
+      - generic [ref=e31]:
+        - link "Coursera for Business" [ref=e33] [cursor=pointer]:
+          - /url: /business
+          - img "Coursera for Business" [ref=e34]
+        - generic [ref=e35]:
+          - button "Why Coursera" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]:
+              - text: Why Coursera
+              - img [ref=e40]
+          - button "Solutions" [ref=e43] [cursor=pointer]:
+            - generic [ref=e44]:
+              - text: Solutions
+              - img [ref=e46]
+          - button "Resources" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]:
+              - text: Resources
+              - img [ref=e52]
+          - link "For Teams" [ref=e55] [cursor=pointer]:
+            - /url: https://www.coursera.org/business/teams
+          - link "Compare Plans" [ref=e57] [cursor=pointer]:
+            - /url: https://www.coursera.org/business/compare-plans
+        - button "Contact sales" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: Contact sales
+    - main [ref=e62]:
+      - generic [ref=e63]:
+        - generic [ref=e65]:
+          - generic [ref=e70]:
+            - heading "The expert-powered learning platform that drives business growth" [level=1] [ref=e71]
+            - paragraph [ref=e74]: Our platform delivers expert-led courses, tailored learning paths, and AI tools to help organizations drive workforce growth globally.
+            - list [ref=e75]:
+              - listitem [ref=e76]:
+                - img [ref=e77]
+                - generic [ref=e79]: Build in-demand skills with world-class content
+              - listitem [ref=e80]:
+                - img [ref=e81]
+                - generic [ref=e83]: Comprehensive learning platform with tailored paths
+              - listitem [ref=e84]:
+                - img [ref=e85]
+                - generic [ref=e87]: Customize training programs with AI-powered tools
+            - generic [ref=e88]:
+              - link "Learn more" [ref=e90] [cursor=pointer]:
+                - /url: https://www.coursera.org/business#form
+                - generic [ref=e91]: Learn more
+              - paragraph [ref=e94]:
+                - text: Upskilling fewer than 125 employees?
+                - link "Get Coursera for Teams" [ref=e95] [cursor=pointer]:
+                  - /url: https://www.coursera.org/business/teams
+                  - paragraph [ref=e96]:
+                    - text: Get Coursera for Teams
+                    - img [ref=e97]
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - generic [ref=e107]: 25%
+              - generic [ref=e108]: Increased employee productivity
+              - link "[1]" [ref=e110] [cursor=pointer]:
+                - /url: "#footnote-1"
+            - generic [ref=e111]:
+              - generic [ref=e113]: 38%
+              - generic [ref=e114]: Higher employee retention
+              - link "[2]" [ref=e116] [cursor=pointer]:
+                - /url: "#footnote-2"
+            - generic [ref=e117]:
+              - generic [ref=e119]: 97%
+              - generic [ref=e120]: Employee engagement in non-mandatory training
+              - link "[3]" [ref=e122] [cursor=pointer]:
+                - /url: "#footnote-3"
+        - generic [ref=e128]:
+          - generic [ref=e129]:
+            - paragraph [ref=e130]: High-quality E-learning content
+            - heading "Learn from the world’s most innovative companies" [level=2] [ref=e131]
+            - paragraph [ref=e134]: Save on training costs with tailored content and industry-recognized credentials from over 350+ leading companies and universities.
+            - list [ref=e135]:
+              - listitem [ref=e136]:
+                - img [ref=e137]
+                - generic [ref=e139]: Learn from more than 20 of the top global business schools
+              - listitem [ref=e140]:
+                - img [ref=e141]
+                - generic [ref=e143]: Choose from a broad catalog of more than 10,600+ courses, 1,400+ specializations, and 165+ Professional Certificates
+              - listitem [ref=e144]:
+                - img [ref=e145]
+                - generic [ref=e147]: Access diverse content formats, from video clips to Professional Certificates, tailored to learner preferences
+              - listitem [ref=e148]:
+                - img [ref=e149]
+                - generic [ref=e151]: Explore Skills Tracks for role-specific learning paths
+          - img "Thirty logos from well known companies & universities" [ref=e156]
+        - generic [ref=e165]:
+          - paragraph [ref=e166]: Find the right plan for your goals
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]:
+                - heading "Coursera Plus" [level=3] [ref=e170]
+                - paragraph [ref=e171]: For individual learners
+                - generic [ref=e172]:
+                  - img [ref=e174]
+                  - generic [ref=e176]: Individual learner
+              - generic [ref=e178]:
+                - list [ref=e179]:
+                  - listitem [ref=e180]:
+                    - img [ref=e181]
+                    - generic [ref=e183]: Access to 10,000+ learning programs
+                  - listitem [ref=e184]:
+                    - img [ref=e185]
+                    - generic [ref=e187]:
+                      - text: AI-powered guidance with Coursera Coach
+                      - 'button "More information about {headline}" [ref=e188] [cursor=pointer]':
+                        - img [ref=e189]
+                  - listitem [ref=e194]:
+                    - img [ref=e195]
+                    - generic [ref=e197]: A certificate for every program you complete
+                - link "Learn more" [ref=e199] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courseraplus
+                  - generic [ref=e200]: Learn more
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - heading "Coursera for Teams" [level=3] [ref=e203]
+                - paragraph [ref=e204]: For your team
+                - generic [ref=e205]:
+                  - img [ref=e207]
+                  - generic [ref=e209]: Up to 125 learners
+              - generic [ref=e211]:
+                - paragraph [ref=e212]: Everything in Coursera Plus, &
+                - list [ref=e213]:
+                  - listitem [ref=e214]:
+                    - img [ref=e215]
+                    - generic [ref=e217]: Analytics and industry benchmark reports
+                  - listitem [ref=e218]:
+                    - img [ref=e219]
+                    - generic [ref=e221]:
+                      - text: AI powered program builder
+                      - 'button "More information about {headline}" [ref=e222] [cursor=pointer]':
+                        - img [ref=e223]
+                  - listitem [ref=e228]:
+                    - img [ref=e229]
+                    - generic [ref=e231]: Custom learning paths with badging
+                  - listitem [ref=e232]:
+                    - img [ref=e233]
+                    - generic [ref=e235]: Billing by invoice
+                - link "Buy Now" [ref=e237] [cursor=pointer]:
+                  - /url: https://www.coursera.org/business/teams
+                  - generic [ref=e238]: Buy Now
+            - generic [ref=e239]:
+              - generic [ref=e240]:
+                - heading "Coursera for Enterprise" [level=3] [ref=e241]
+                - paragraph [ref=e242]: For your whole organization
+                - generic [ref=e243]:
+                  - img [ref=e245]
+                  - generic [ref=e247]: 125+ learners
+              - generic [ref=e249]:
+                - paragraph [ref=e250]: Everything in Coursera for Teams, &
+                - list [ref=e251]:
+                  - listitem [ref=e252]:
+                    - img [ref=e253]
+                    - generic [ref=e255]:
+                      - text: Pre-curated skill tracks
+                      - 'button "More information about {headline}" [ref=e256] [cursor=pointer]':
+                        - img [ref=e257]
+                  - listitem [ref=e262]:
+                    - img [ref=e263]
+                    - generic [ref=e265]:
+                      - text: AI-powered course builder
+                      - 'button "More information about {headline}" [ref=e266] [cursor=pointer]':
+                        - img [ref=e267]
+                  - listitem [ref=e272]:
+                    - img [ref=e273]
+                    - generic [ref=e275]: Single sign-on, API and partner integration
+                  - listitem [ref=e276]:
+                    - img [ref=e277]
+                    - generic [ref=e279]: Dedicated customer success managers
+                - paragraph [ref=e284]:
+                  - strong [ref=e285]: Custom Pricing
+                - link "Contact Sales" [ref=e287] [cursor=pointer]:
+                  - /url: https://www.coursera.org/business/learn-more
+                  - generic [ref=e288]: Contact Sales
+        - generic [ref=e294]:
+          - generic [ref=e296]:
+            - paragraph [ref=e297]: Explore Skill Tracks
+            - heading "Choose the right Skills Track for your team’s needs" [level=2] [ref=e298]
+            - paragraph [ref=e301]: Each Skills Track offers a focused, measurable journey powered by a leading online learning platform for business. Keep teams ahead with up-to-date content that drives agility, security, service excellence, and competitive advantage in a fast-changing economy.
+          - generic [ref=e303]:
+            - generic [ref=e304]:
+              - img "Data Skill Track Vertical" [ref=e306]
+              - generic [ref=e307]:
+                - paragraph [ref=e308]: Uncover insights
+                - heading "Data Skills Track" [level=3] [ref=e309]
+                - paragraph [ref=e310]: Strengthen data-driven decision-making with a leading online learning platform for business. Access learning paths in analytics, data management, and automation to help teams enhance forecasting and predictive capabilities for smarter, faster decisions.
+              - link "Master essential data skills" [ref=e311] [cursor=pointer]:
+                - /url: https://www.coursera.org/business/data-skills-track
+                - generic [ref=e312]:
+                  - text: Master essential data skills
+                  - img [ref=e314]
+            - generic [ref=e316]:
+              - img "IT Skill Track Vertical" [ref=e318]
+              - generic [ref=e319]:
+                - paragraph [ref=e320]: Modernize systems
+                - heading "IT Skills Track" [level=3] [ref=e321]
+                - paragraph [ref=e322]: Protect your organization with cybersecurity, IT operations, and network administration learning paths through a trusted business learning platform. Strengthen security and manage evolving risks with scalable training built for enterprise agility.
+              - link "Explore IT learning solutions" [ref=e323] [cursor=pointer]:
+                - /url: https://www.coursera.org/business/it-skills-track
+                - generic [ref=e324]:
+                  - text: Explore IT learning solutions
+                  - img [ref=e326]
+            - generic [ref=e328]:
+              - img "GenAI Skill Track Vertical" [ref=e330]
+              - generic [ref=e331]:
+                - paragraph [ref=e332]: Accelerate innovation
+                - heading "GenAI Skills Track" [level=3] [ref=e333]
+                - paragraph [ref=e334]: Empower every team through online learning platforms for business that drive innovation and productivity. Deliver expert-led paths in generative AI, to help professionals across roles learn AI tools, automate repetitive tasks, and accelerate workflows.
+              - link "Explore AI innovation" [ref=e335] [cursor=pointer]:
+                - /url: https://www.coursera.org/business/generative-ai-skills-track
+                - generic [ref=e336]:
+                  - text: Explore AI innovation
+                  - img [ref=e338]
+        - generic [ref=e347]:
+          - heading "Skills-based learning for teams of all sizes" [level=2] [ref=e349]
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - img [ref=e352]
+              - generic [ref=e354]: 12,000+ courses
+            - generic [ref=e355]:
+              - img [ref=e356]
+              - generic [ref=e360]: 140+ certificates
+            - generic [ref=e361]:
+              - img [ref=e362]
+              - generic [ref=e364]: 1500+ hands on labs
+            - generic [ref=e365]:
+              - img [ref=e366]
+              - generic [ref=e368]: 200,000+ clips
+          - generic [ref=e370]:
+            - generic [ref=e374]:
+              - img [ref=e376]
+              - searchbox "Search by keyword" [ref=e378]: Data Analysis
+              - generic [ref=e379]:
+                - button "Clear search" [ref=e380] [cursor=pointer]:
+                  - img [ref=e381]
+                - button "Search" [ref=e384] [cursor=pointer]:
+                  - img [ref=e385]
+              - group
+            - radiogroup [ref=e390]:
+              - radio "Data Analysis" [checked] [ref=e391] [cursor=pointer]:
+                - generic [ref=e393]: Data Analysis
+              - radio "Generative AI" [ref=e394] [cursor=pointer]:
+                - generic [ref=e396]: Generative AI
+              - radio "Machine Learning" [ref=e397] [cursor=pointer]:
+                - generic [ref=e399]: Machine Learning
+              - radio "Python Programming" [ref=e400] [cursor=pointer]:
+                - generic [ref=e402]: Python Programming
+              - radio "Cloud Computing" [ref=e403] [cursor=pointer]:
+                - generic [ref=e405]: Cloud Computing
+              - radio "Project Management" [ref=e406] [cursor=pointer]:
+                - generic [ref=e408]: Project Management
+          - paragraph [ref=e409]: Showing 5 of 10,000+ results for "Data Analysis"
+          - generic [ref=e410]:
+            - generic [ref=e413]:
+              - img [ref=e416]
+              - generic [ref=e417]:
+                - generic [ref=e418]:
+                  - generic "IBM" [ref=e421]:
+                    - paragraph [ref=e424]: IBM
+                  - link "Excel Basics for Data Analysis, offered by IBM, Course" [ref=e425] [cursor=pointer]:
+                    - /url: /learn/excel-basics-data-analysis-ibm?source=business
+                    - heading "Excel Basics for Data Analysis" [level=3] [ref=e426]
+                - generic [ref=e427]:
+                  - generic [ref=e428]: Course
+                  - img "Rated 4.7 out of 5 stars" [ref=e429]:
+                    - img [ref=e430]
+                    - generic [ref=e432]: "4.7"
+            - generic [ref=e435]:
+              - img [ref=e438]
+              - generic [ref=e439]:
+                - generic [ref=e440]:
+                  - generic "IBM" [ref=e443]:
+                    - paragraph [ref=e446]: IBM
+                  - link "Data Analysis with Python, offered by IBM, Course" [ref=e447] [cursor=pointer]:
+                    - /url: /learn/data-analysis-with-python?source=business
+                    - heading "Data Analysis with Python" [level=3] [ref=e448]
+                - generic [ref=e449]:
+                  - generic [ref=e450]: Course
+                  - img "Rated 4.7 out of 5 stars" [ref=e451]:
+                    - img [ref=e452]
+                    - generic [ref=e454]: "4.7"
+            - generic [ref=e457]:
+              - img [ref=e460]
+              - generic [ref=e461]:
+                - generic [ref=e462]:
+                  - generic "Coursera" [ref=e465]:
+                    - paragraph [ref=e468]: Coursera
+                  - link "Introduction to Data Analysis using Microsoft Excel, offered by Coursera, Guided project" [ref=e469] [cursor=pointer]:
+                    - /url: /projects/introduction-data-analysis-microsoft-excel?source=business
+                    - heading "Introduction to Data Analysis using Microsoft Excel" [level=3] [ref=e470]
+                - generic [ref=e471]:
+                  - generic [ref=e472]: Guided project
+                  - img "Rated 4.7 out of 5 stars" [ref=e473]:
+                    - img [ref=e474]
+                    - generic [ref=e476]: "4.7"
+            - generic [ref=e479]:
+              - img [ref=e482]
+              - generic [ref=e483]:
+                - generic [ref=e484]:
+                  - generic "Microsoft" [ref=e487]:
+                    - paragraph [ref=e490]: Microsoft
+                  - link "Data Analysis and Visualization with Power BI, offered by Microsoft, Course" [ref=e491] [cursor=pointer]:
+                    - /url: /learn/data-analysis-and-visualization-with-power-bi?source=business
+                    - heading "Data Analysis and Visualization with Power BI" [level=3] [ref=e492]
+                - generic [ref=e493]:
+                  - generic [ref=e494]: Course
+                  - img "Rated 4.7 out of 5 stars" [ref=e495]:
+                    - img [ref=e496]
+                    - generic [ref=e498]: "4.7"
+            - generic [ref=e501]:
+              - img [ref=e504]
+              - generic [ref=e505]:
+                - generic [ref=e506]:
+                  - generic "Meta" [ref=e509]:
+                    - paragraph [ref=e512]: Meta
+                  - link "Data Analysis with Spreadsheets and SQL, offered by Meta, Course" [ref=e513] [cursor=pointer]:
+                    - /url: /learn/data-analysis-with-spreadsheets-and-sql?source=business
+                    - heading "Data Analysis with Spreadsheets and SQL" [level=3] [ref=e514]
+                - generic [ref=e515]:
+                  - generic [ref=e516]: Course
+                  - img "Rated 4.6 out of 5 stars" [ref=e517]:
+                    - img [ref=e518]
+                    - generic [ref=e520]: "4.6"
+          - generic [ref=e521]:
+            - link "Get Started" [ref=e522] [cursor=pointer]:
+              - /url: https://www.coursera.org/business/learn-more
+              - generic [ref=e523]: Get Started
+            - button "View all 10,000+ results" [ref=e524] [cursor=pointer]:
+              - generic [ref=e525]: View all 10,000+ results
+        - generic [ref=e531]:
+          - generic [ref=e533]:
+            - heading "Top companies develop skills with Coursera" [level=2] [ref=e534]
+            - paragraph [ref=e535]: Join over 4,700 companies that have partnered with Coursera to transform their workforce.
+          - list [ref=e538]:
+            - listitem [ref=e539]:
+              - img "Airbus" [ref=e540]
+            - listitem [ref=e541]:
+              - img "Estée Lauder Companies logo" [ref=e542]
+            - listitem [ref=e543]:
+              - img "Petrobras Logo" [ref=e544]
+            - listitem [ref=e545]:
+              - img "Danone logo" [ref=e546]
+            - listitem [ref=e547]:
+              - img "Merck" [ref=e548]
+            - listitem [ref=e549]:
+              - img "Tata Logo" [ref=e550]
+            - listitem [ref=e551]:
+              - img "Leidos" [ref=e552]
+            - listitem [ref=e553]:
+              - img "Maxis" [ref=e554]
+            - listitem [ref=e555]:
+              - img "kroger" [ref=e556]
+        - generic [ref=e562]:
+          - generic [ref=e568]:
+            - heading "Ready to learn more?" [level=2] [ref=e569]
+            - paragraph [ref=e572]: "Let’s connect to discuss how Coursera can help you develop agile talent with job-aligned skills to foster innovation, boost productivity, and drive business growth in a fast-changing world. Discover how we partner with industry-leading companies to:"
+            - list [ref=e573]:
+              - listitem [ref=e574]:
+                - img [ref=e575]
+                - generic [ref=e577]: Build in-demand skills to fuel growth
+              - listitem [ref=e578]:
+                - img [ref=e579]
+                - generic [ref=e581]: Engage and retain talent across teams
+              - listitem [ref=e582]:
+                - img [ref=e583]
+                - generic [ref=e585]: Boost employee productivity
+          - generic [ref=e592]:
+            - generic [ref=e593]:
+              - generic [ref=e595]:
+                - generic: First Name
+                - textbox "First Name" [ref=e596]
+              - generic [ref=e598]:
+                - generic: Last Name
+                - textbox "Last Name" [ref=e599]
+            - generic [ref=e600]:
+              - generic [ref=e602]:
+                - generic: Work Email Address
+                - textbox "Work Email Address" [ref=e603]
+              - generic [ref=e605]:
+                - generic: Phone Number
+                - textbox "Phone Number" [ref=e606]:
+                  - /placeholder: Country Code + Phone Number
+            - generic [ref=e609]:
+              - generic: Organization Type
+              - combobox "Organization Type" [ref=e610] [cursor=pointer]:
+                - option "Select..." [selected]
+                - option "Business"
+                - option "College/University"
+                - option "Government"
+                - option "Non-Profit"
+            - generic [ref=e611]:
+              - generic [ref=e613]:
+                - generic: Company Name
+                - textbox "Company Name" [ref=e614]
+              - generic [ref=e616]:
+                - generic: Company Size
+                - combobox "Company Size" [ref=e617] [cursor=pointer]:
+                  - option "Select..." [selected]
+                  - option "1-500"
+                  - option "501-1000"
+                  - option "1001-5000"
+                  - option "5001-15000"
+                  - option "15001-30000"
+                  - option "30001+"
+            - generic [ref=e620]:
+              - generic: Country
+              - combobox "Country" [ref=e621] [cursor=pointer]:
+                - option "Select..." [selected]
+                - option "United States"
+                - option "Canada"
+                - option "Afghanistan"
+                - option "Åland Islands"
+                - option "Albania"
+                - option "Algeria"
+                - option "American Samoa"
+                - option "Andorra"
+                - option "Angola"
+                - option "Anguilla"
+                - option "Antarctica"
+                - option "Antigua and Barbuda"
+                - option "Argentina"
+                - option "Armenia"
+                - option "Aruba"
+                - option "Australia"
+                - option "Austria"
+                - option "Azerbaijan"
+                - option "Bahamas"
+                - option "Bahrain"
+                - option "Bangladesh"
+                - option "Barbados"
+                - option "Belarus"
+                - option "Belgium"
+                - option "Belize"
+                - option "Benin"
+                - option "Bermuda"
+                - option "Bhutan"
+                - option "Bolivia, Plurinational State of"
+                - option "Bonaire, Sint Eustatius and Saba"
+                - option "Bosnia and Herzegovina"
+                - option "Botswana"
+                - option "Bouvet Island"
+                - option "Brazil"
+                - option "British Indian Ocean Territory"
+                - option "Brunei Darussalam"
+                - option "Bulgaria"
+                - option "Burkina Faso"
+                - option "Burundi"
+                - option "Cambodia"
+                - option "Cameroon"
+                - option "Canada"
+                - option "Cape Verde"
+                - option "Cayman Islands"
+                - option "Central African Republic"
+                - option "Chad"
+                - option "Chile"
+                - option "China"
+                - option "Christmas Island"
+                - option "Cocos (Keeling) Islands"
+                - option "Colombia"
+                - option "Comoros"
+                - option "Congo, the Democratic Republic of the"
+                - option "Congo"
+                - option "Cook Islands"
+                - option "Costa Rica"
+                - option "Côte d'Ivoire"
+                - option "Croatia"
+                - option "Cuba"
+                - option "Curaçao"
+                - option "Cyprus"
+                - option "Czech Republic"
+                - option "Denmark"
+                - option "Djibouti"
+                - option "Dominica"
+                - option "Dominican Republic"
+                - option "Ecuador"
+                - option "Egypt"
+                - option "El Salvador"
+                - option "Equatorial Guinea"
+                - option "Eritrea"
+                - option "Estonia"
+                - option "Ethiopia"
+                - option "Falkland Islands (Malvinas)"
+                - option "Faroe Islands"
+                - option "Fiji"
+                - option "Finland"
+                - option "France"
+                - option "French Guiana"
+                - option "French Polynesia"
+                - option "French Southern Territories"
+                - option "Gabon"
+                - option "Gambia"
+                - option "Georgia"
+                - option "Germany"
+                - option "Ghana"
+                - option "Gibraltar"
+                - option "Greece"
+                - option "Greenland"
+                - option "Grenada"
+                - option "Guadeloupe"
+                - option "Guam"
+                - option "Guatemala"
+                - option "Guernsey"
+                - option "Guinea"
+                - option "Guinea-Bissau"
+                - option "Guyana"
+                - option "Haiti"
+                - option "Heard Island and McDonald Islands"
+                - option "Holy See (Vatican City State)"
+                - option "Honduras"
+                - option "Hong Kong"
+                - option "Hungary"
+                - option "Iceland"
+                - option "India"
+                - option "Indonesia"
+                - option "Iran, Islamic Republic of"
+                - option "Iraq"
+                - option "Ireland"
+                - option "Isle of Man"
+                - option "Israel"
+                - option "Italy"
+                - option "Jamaica"
+                - option "Japan"
+                - option "Jersey"
+                - option "Jordan"
+                - option "Kazakhstan"
+                - option "Kenya"
+                - option "Kiribati"
+                - option "Korea, Democratic People's Republic of"
+                - option "Korea, Republic of"
+                - option "Kuwait"
+                - option "Kyrgyzstan"
+                - option "Lao People's Democratic Republic"
+                - option "Latvia"
+                - option "Lebanon"
+                - option "Lesotho"
+                - option "Liberia"
+                - option "Libya"
+                - option "Liechtenstein"
+                - option "Lithuania"
+                - option "Luxembourg"
+                - option "Macao"
+                - option "Macedonia, the former Yugoslav Republic of"
+                - option "Madagascar"
+                - option "Malawi"
+                - option "Malaysia"
+                - option "Maldives"
+                - option "Mali"
+                - option "Malta"
+                - option "Marshall Islands"
+                - option "Martinique"
+                - option "Mauritania"
+                - option "Mauritius"
+                - option "Mayotte"
+                - option "Mexico"
+                - option "Micronesia, Federated States of"
+                - option "Moldova, Republic of"
+                - option "Monaco"
+                - option "Mongolia"
+                - option "Montenegro"
+                - option "Montserrat"
+                - option "Morocco"
+                - option "Mozambique"
+                - option "Myanmar"
+                - option "Namibia"
+                - option "Nauru"
+                - option "Nepal"
+                - option "Netherlands"
+                - option "New Caledonia"
+                - option "New Zealand"
+                - option "Nicaragua"
+                - option "Niger"
+                - option "Nigeria"
+                - option "Niue"
+                - option "Norfolk Island"
+                - option "Northern Mariana Islands"
+                - option "Norway"
+                - option "Oman"
+                - option "Pakistan"
+                - option "Palau"
+                - option "Palestinian Territory, Occupied"
+                - option "Panama"
+                - option "Papua New Guinea"
+                - option "Paraguay"
+                - option "Peru"
+                - option "Philippines"
+                - option "Pitcairn"
+                - option "Poland"
+                - option "Portugal"
+                - option "Puerto Rico"
+                - option "Qatar"
+                - option "Réunion"
+                - option "Romania"
+                - option "Russian Federation"
+                - option "Rwanda"
+                - option "Saint Barthélemy"
+                - option "Saint Helena, Ascension and Tristan da Cunha"
+                - option "Saint Kitts and Nevis"
+                - option "Saint Lucia"
+                - option "Saint Martin (French part)"
+                - option "Saint Pierre and Miquelon"
+                - option "Saint Vincent and the Grenadines"
+                - option "Samoa"
+                - option "San Marino"
+                - option "Sao Tome and Principe"
+                - option "Saudi Arabia"
+                - option "Senegal"
+                - option "Serbia"
+                - option "Seychelles"
+                - option "Sierra Leone"
+                - option "Singapore"
+                - option "Sint Maarten (Dutch part)"
+                - option "Slovakia"
+                - option "Slovenia"
+                - option "Solomon Islands"
+                - option "Somalia"
+                - option "South Africa"
+                - option "South Georgia and the South Sandwich Islands"
+                - option "South Sudan"
+                - option "Spain"
+                - option "Sri Lanka"
+                - option "Sudan"
+                - option "Suriname"
+                - option "Svalbard and Jan Mayen"
+                - option "Swaziland"
+                - option "Sweden"
+                - option "Switzerland"
+                - option "Syrian Arab Republic"
+                - option "Taiwan"
+                - option "Tajikistan"
+                - option "Tanzania, United Republic of"
+                - option "Thailand"
+                - option "Timor-Leste"
+                - option "Togo"
+                - option "Tokelau"
+                - option "Tonga"
+                - option "Trinidad and Tobago"
+                - option "Tunisia"
+                - option "Turkey"
+                - option "Turkmenistan"
+                - option "Turks and Caicos Islands"
+                - option "Tuvalu"
+                - option "Uganda"
+                - option "Ukraine"
+                - option "United Arab Emirates"
+                - option "United Kingdom"
+                - option "United States"
+                - option "United States Minor Outlying Islands"
+                - option "Uruguay"
+                - option "Uzbekistan"
+                - option "Vanuatu"
+                - option "Venezuela, Bolivarian Republic of"
+                - option "Viet Nam"
+                - option "Virgin Islands, British"
+                - option "Virgin Islands, U.S."
+                - option "Wallis and Futuna"
+                - option "Western Sahara"
+                - option "Yemen"
+                - option "Zambia"
+                - option "Zimbabwe"
+            - paragraph [ref=e626]:
+              - text: By submitting your info in the form above, you agree to our
+              - link "Terms of Use" [ref=e627] [cursor=pointer]:
+                - /url: https://www.coursera.org/about/terms
+              - text: and
+              - link "Privacy Notice." [ref=e628] [cursor=pointer]:
+                - /url: https://www.coursera.org/about/privacy
+              - text: We may use this info to contact you and/or use data from third parties to personalize your experience.
+            - button "Submit" [ref=e631] [cursor=pointer]
+            - group
+        - generic [ref=e639]:
+          - link "Coursera named a Leader in The Forrester Wave™ report Learn more about why Coursera is a Leader among tech skill development platforms, and how we believe Coursera for Business is empowering institutions across the world to equip their employees with essential job skills. Forrester Wave Report" [ref=e640] [cursor=pointer]:
+            - /url: https://www.coursera.org/enterprise/resources/ebook/forrester-wave-report
+            - generic [ref=e642]:
+              - heading "Coursera named a Leader in The Forrester Wave™ report" [level=2] [ref=e643]
+              - paragraph [ref=e644]: Learn more about why Coursera is a Leader among tech skill development platforms, and how we believe Coursera for Business is empowering institutions across the world to equip their employees with essential job skills.
+              - button "Forrester Wave Report" [ref=e645]:
+                - generic [ref=e646]:
+                  - text: Forrester Wave Report
+                  - img [ref=e648]
+          - link "EU AI Act Playbook Ensure your organisation is compliant with Article 4 of the EU AI Act and gain actionable insights to ensure teams use AI safely and ethically. Learn More" [ref=e650] [cursor=pointer]:
+            - /url: "https://www.coursera.org/enterprise/resources/ebook/eu-ai-act-playbook "
+            - generic [ref=e652]:
+              - heading "EU AI Act Playbook" [level=2] [ref=e653]
+              - paragraph [ref=e654]: Ensure your organisation is compliant with Article 4 of the EU AI Act and gain actionable insights to ensure teams use AI safely and ethically.
+              - button "Learn More" [ref=e655]:
+                - generic [ref=e656]:
+                  - text: Learn More
+                  - img [ref=e658]
+          - link "Global Skills Report 2025 Discover the critical skills people need to thrive in a changing world. Explore insights drawn from 170M+ Coursera learners and key economic indices. Learn More" [ref=e660] [cursor=pointer]:
+            - /url: https://www.coursera.org/skills-reports/global
+            - generic [ref=e662]:
+              - heading "Global Skills Report 2025" [level=2] [ref=e663]
+              - paragraph [ref=e664]: Discover the critical skills people need to thrive in a changing world. Explore insights drawn from 170M+ Coursera learners and key economic indices.
+              - button "Learn More" [ref=e665]:
+                - generic [ref=e666]:
+                  - text: Learn More
+                  - img [ref=e668]
+    - contentinfo [ref=e670]:
+      - contentinfo [ref=e671]:
+        - generic [ref=e673]:
+          - generic [ref=e676]:
+            - heading "Coursera" [level=3] [ref=e677]
+            - list [ref=e679]:
+              - listitem [ref=e680]:
+                - link "About" [ref=e681] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e682]:
+                - link "What We Offer" [ref=e683] [cursor=pointer]:
+                  - /url: /about/how-coursera-works/
+              - listitem [ref=e684]:
+                - link "Leadership" [ref=e685] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/leadership
+              - listitem [ref=e686]:
+                - link "Careers" [ref=e687] [cursor=pointer]:
+                  - /url: https://careers.coursera.com/
+              - listitem [ref=e688]:
+                - link "Catalog" [ref=e689] [cursor=pointer]:
+                  - /url: /browse
+              - listitem [ref=e690]:
+                - link "Coursera Plus" [ref=e691] [cursor=pointer]:
+                  - /url: /courseraplus
+              - listitem [ref=e692]:
+                - link "Professional Certificates" [ref=e693] [cursor=pointer]:
+                  - /url: /professional-certificates
+              - listitem [ref=e694]:
+                - link "MasterTrack® Certificates" [ref=e695] [cursor=pointer]:
+                  - /url: /mastertrack
+              - listitem [ref=e696]:
+                - link "Degrees" [ref=e697] [cursor=pointer]:
+                  - /url: /degrees
+              - listitem [ref=e698]:
+                - link "For Enterprise" [ref=e699] [cursor=pointer]:
+                  - /url: /business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise
+              - listitem [ref=e700]:
+                - link "For Government" [ref=e701] [cursor=pointer]:
+                  - /url: /government?utm_campaign=website&utm_content=corp-to-home-footer-for-government&utm_medium=coursera&utm_source=enterprise
+              - listitem [ref=e702]:
+                - link "For Campus" [ref=e703] [cursor=pointer]:
+                  - /url: /campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise
+              - listitem [ref=e704]:
+                - link "Become a Partner" [ref=e705] [cursor=pointer]:
+                  - /url: https://partnerships.coursera.org/?utm_medium=coursera&utm_source=partnerships&utm_campaign=website&utm_content=corp-to-home-footer-become-a-partner
+              - listitem [ref=e706]:
+                - link "Social Impact" [ref=e707] [cursor=pointer]:
+                  - /url: /social-impact
+          - generic [ref=e710]:
+            - heading "Community" [level=3] [ref=e711]
+            - list [ref=e713]:
+              - listitem [ref=e714]:
+                - link "Learners" [ref=e715] [cursor=pointer]:
+                  - /url: https://www.coursera.community
+              - listitem [ref=e716]:
+                - link "Partners" [ref=e717] [cursor=pointer]:
+                  - /url: https://www.coursera.org/partners
+              - listitem [ref=e718]:
+                - link "Beta Testers" [ref=e719] [cursor=pointer]:
+                  - /url: https://www.coursera.support/s/article/360000152926-Become-a-Coursera-beta-tester
+              - listitem [ref=e720]:
+                - link "Blog" [ref=e721] [cursor=pointer]:
+                  - /url: https://blog.coursera.org
+              - listitem [ref=e722]:
+                - link "The Coursera Podcast" [ref=e723] [cursor=pointer]:
+                  - /url: https://open.spotify.com/show/58M36bneU7REOofdPZxe6A
+              - listitem [ref=e724]:
+                - link "Tech Blog" [ref=e725] [cursor=pointer]:
+                  - /url: https://medium.com/coursera-engineering
+          - generic [ref=e728]:
+            - heading "More" [level=3] [ref=e729]
+            - list [ref=e731]:
+              - listitem [ref=e732]:
+                - link "Press" [ref=e733] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/press
+              - listitem [ref=e734]:
+                - link "Investors" [ref=e735] [cursor=pointer]:
+                  - /url: https://investor.coursera.com
+              - listitem [ref=e736]:
+                - link "Terms" [ref=e737] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/terms
+              - listitem [ref=e738]:
+                - link "Privacy" [ref=e739] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/privacy
+              - listitem [ref=e740]:
+                - link "Help" [ref=e741] [cursor=pointer]:
+                  - /url: https://learner.coursera.help/hc
+              - listitem [ref=e742]:
+                - link "Accessibility" [ref=e743] [cursor=pointer]:
+                  - /url: https://learner.coursera.help/hc/articles/360050668591-Accessibility-Statement
+              - listitem [ref=e744]:
+                - link "Contact" [ref=e745] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/contact
+              - listitem [ref=e746]:
+                - link "Articles" [ref=e747] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles
+              - listitem [ref=e748]:
+                - link "Directory" [ref=e749] [cursor=pointer]:
+                  - /url: /directory
+              - listitem [ref=e750]:
+                - link "Affiliates" [ref=e751] [cursor=pointer]:
+                  - /url: /about/affiliates
+              - listitem [ref=e752]:
+                - link "Modern Slavery Statement" [ref=e753] [cursor=pointer]:
+                  - /url: https://coursera_assets.s3.amazonaws.com/footer/Modern+Slavery+Statement+(approved+March+26%2C+2025).pdf
+              - listitem [ref=e754]:
+                - link "Cookies Preference Center" [ref=e755] [cursor=pointer]:
+                  - /url: /about/cookies-manage
+          - generic [ref=e758]:
+            - heading "Mobile App" [level=3] [ref=e759]
+            - generic [ref=e760]:
+              - link "Download on the App Store":
+                - /url: https://itunes.apple.com/app/apple-store/id736535961?pt=2334150&ct=Coursera%20Web%20Promo%20Banner&mt=8
+                - img "Download on the App Store" [ref=e762] [cursor=pointer]
+              - link "Get it on Google Play":
+                - /url: http://play.google.com/store/apps/details?id=org.coursera.android
+                - img "Get it on Google Play" [ref=e764] [cursor=pointer]
+            - img "Logo of Certified B Corporation" [ref=e767]
+          - generic [ref=e768]:
+            - generic [ref=e770]: © 2026 Coursera Inc. All rights reserved.
+            - list [ref=e772]:
+              - listitem [ref=e773]:
+                - link "Coursera Facebook":
+                  - /url: https://www.facebook.com/Coursera
+                  - generic:
+                    - img "Coursera Facebook"
+              - listitem [ref=e774]:
+                - link "Coursera LinkedIn":
+                  - /url: https://www.linkedin.com/company/coursera
+                  - generic:
+                    - img "Coursera LinkedIn"
+              - listitem [ref=e775]:
+                - link "Coursera Twitter":
+                  - /url: https://twitter.com/coursera
+                  - generic:
+                    - img "Coursera Twitter"
+              - listitem [ref=e776]:
+                - link "Coursera YouTube":
+                  - /url: https://www.youtube.com/user/coursera
+                  - generic:
+                    - img "Coursera YouTube"
+              - listitem [ref=e777]:
+                - link "Coursera Instagram":
+                  - /url: https://www.instagram.com/coursera/
+                  - generic:
+                    - img "Coursera Instagram"
+    - generic [ref=e778]:
+      - generic [ref=e779]: Source
+      - list [ref=e781]:
+        - listitem [ref=e782]:
+          - paragraph [ref=e784]:
+            - link "IDC Whitepaper" [ref=e785] [cursor=pointer]:
+              - /url: https://blog.coursera.org/coursera-for-business-helps-organizations-drive-business-value-with-746-roi-according-to-idc/
+        - listitem [ref=e786]:
+          - paragraph [ref=e788]:
+            - link "IDC Whitepaper" [ref=e789] [cursor=pointer]:
+              - /url: https://blog.coursera.org/coursera-for-business-helps-organizations-drive-business-value-with-746-roi-according-to-idc/
+        - listitem [ref=e790]:
+          - paragraph [ref=e792]:
+            - link "Forrester Total Economic Impact™ Study of Coursera for Business" [ref=e793] [cursor=pointer]:
+              - /url: https://www.coursera.org/enterprise/resources/ebook/forrester-study
+  - alert [ref=e794]:
+    - button "close banner" [ref=e795] [cursor=pointer]:
+      - img [ref=e796]
+    - generic [ref=e799]:
+      - paragraph [ref=e800]: Save 40% on Coursera for Teams and train your team in skills that scale.
+      - link "Join Today" [ref=e801] [cursor=pointer]:
+        - /url: https://www.coursera.org/business/teams?promoCode=spring-promo-2026
+```
+
+# Test source
+
+```ts
+  1  | import { Page, Locator } from "@playwright/test";
+  2  |  
+  3  | export class HomePage {
+  4  |   readonly page: Page;
+  5  |   readonly inputbox: Locator;
+  6  |   readonly languageFilter: Locator;
+  7  |   readonly levelFilter: Locator;
+  8  |   readonly forEnterpriseLink: Locator;
+  9  |   readonly forCampusLink: Locator;
+  10 |  
+  11 |   constructor(page: Page) {
+  12 |     this.page = page;
+  13 |     this.inputbox = page.locator("#search-autocomplete-input");
+  14 |     this.languageFilter = page.getByTestId("filter-dropdown-language");
+  15 |     this.levelFilter = page.getByTestId("filter-dropdown-productDifficultyLevel");
+  16 |     this.forEnterpriseLink = page.locator("a.rc-SubFooterSection__content-column-link-text", { hasText: "For Enterprise" });
+  17 |     this.forCampusLink = page.locator("a.rc-GlobalFooter_column_list_item_link", { hasText: "For Campus" });
+  18 |   }
+  19 |  
+  20 |   async goto() {
+  21 |     await this.page.goto("https://www.coursera.org");
+  22 |     await this.page.waitForLoadState("domcontentloaded");
+  23 |   }
+  24 |  
+  25 |   async searchCourse(courseName: string) {
+  26 |     await this.inputbox.click();
+  27 |     await this.inputbox.fill(courseName);
+  28 |     await this.inputbox.press("Enter");
+  29 |     await this.page.waitForLoadState("domcontentloaded");
+  30 |   }
+  31 |  
+  32 |   async clickForEnterprise() {
+  33 |     await this.forEnterpriseLink.scrollIntoViewIfNeeded();
+  34 |     await this.forEnterpriseLink.waitFor({ state: "visible" });
+  35 |     await this.forEnterpriseLink.click();
+  36 |     await this.page.waitForLoadState("domcontentloaded");
+  37 |   }
+  38 |  
+  39 |   async clickForCampus() {
+> 40 |     await this.forCampusLink.scrollIntoViewIfNeeded();
+     |                              ^ Error: locator.scrollIntoViewIfNeeded: Element is not attached to the DOM
+  41 |     await this.forCampusLink.waitFor({ state: "visible" });
+  42 |     await this.forCampusLink.click();
+  43 |     await this.page.waitForLoadState("domcontentloaded");
+  44 |   }
+  45 | }
+```
